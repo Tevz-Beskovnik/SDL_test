@@ -4,6 +4,7 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_timer.h>
+#include <serializer.hpp>
 
 void init_sdl(SDL_Renderer* &renderer, SDL_Window* &window) {
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS) < 0) {

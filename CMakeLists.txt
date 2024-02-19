@@ -34,5 +34,6 @@ target_include_directories(
         PUBLIC /opt/homebrew/Cellar/sdl2/2.30.0/include/SDL2
         PUBLIC /opt/homebrew/Cellar/sdl2_image/2.8.2/include/SDL2
         PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/core
-        PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/scenes
+        PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/scene
+        PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/serializer
 )
