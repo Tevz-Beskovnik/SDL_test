@@ -12,7 +12,7 @@ void init_sdl(SDL_Renderer* &renderer, SDL_Window* &window) {
         return;
     }
 
-    if (IMG_Init(IMG_INIT_PNG) == 0) {
+    if (IMG_Init(IMG_INIT_PNG | IMG_INIT_JPG) == 0) {
         LOG_ERROR(IMG_GetError());
         return;
     }

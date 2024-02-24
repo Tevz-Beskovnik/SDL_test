@@ -8,15 +8,11 @@
 
 class Object {
     public:
-        explicit Object() = default;
-
         Object(SDL_Renderer* renderer, int32_t x, int32_t y, std::string path, bool colidable = false);
 
         Object(SDL_Renderer* renderer, int32_t x, int32_t y, int32_t w, int32_t h, std::string path, bool colidable = false);
 
         ~Object();
-
-        void set_position(int32_t x, int32_t y) { this->x = x; this->y = y; };
 
         virtual void draw() {};
 
@@ -24,7 +20,7 @@ class Object {
 
         virtual void on_event(const SDL_Event& e) {};
 
-        void register_object(std::vector<Object *>& objects, std::vector<uint32_t>& collidable_ids, uint32_t id);
+        void register_objects(std::vector<Object *>& objects, std::vector<uint32_t>& collidable_ids, uint32_t id);
 
         bool colidable;
 
@@ -44,8 +40,6 @@ class Object {
         SDL_Rect rect;
         SDL_Renderer* renderer;
         std::string path;
-        int32_t x;
-        int32_t y;
 
     private:
         int32_t object_id;

@@ -43,6 +43,8 @@ public:
     void draw();
 
 protected:
+    virtual void draw_impl() {};
+
     virtual void on_event_impl(const SDL_Event &e) {};
 
     SDL_Rect source;
@@ -54,6 +56,9 @@ protected:
     std::vector<uint32_t> collidable_ids;
 
     std::string title;
+
+    int32_t width;
+    int32_t height;
 
     SDL_Texture* background_texture;
     std::string background;

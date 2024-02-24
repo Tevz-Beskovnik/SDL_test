@@ -9,7 +9,7 @@
 #define ENUM_TO_STRING(e) #e
 
 #ifndef BOLT_LOG_FILE
-#define BOLT_LOG_FILE "../../log"
+#define BOLT_LOG_FILE "/Users/tevz/Documents/programing/SDL_test/log"
 #endif
 
 #define LOG_ERROR(msg) LogUtil::log(LogType::ERROR, msg)
